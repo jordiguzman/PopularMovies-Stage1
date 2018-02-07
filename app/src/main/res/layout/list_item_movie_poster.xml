@@ -12,7 +12,5 @@
         android:layout_centerInParent="true"
         android:adjustViewBounds="true"
         android:layout_margin="4dp"
-
-
         android:scaleType="fitXY"/>
 </RelativeLayout>

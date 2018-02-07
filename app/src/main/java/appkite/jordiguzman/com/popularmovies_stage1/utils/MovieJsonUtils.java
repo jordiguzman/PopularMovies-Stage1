@@ -25,11 +25,11 @@ public class MovieJsonUtils {
         Movie[] result = new Movie[jsonArrayResult.length()];
         for (int i = 0; i < jsonArrayResult.length(); i++) {
             Movie movie = new Movie();
-            movie.setmTitle(jsonArrayResult.getJSONObject(i).getString(MOVIE_TITLE));
-            movie.setmMoviePoster(jsonArrayResult.getJSONObject(i).getString(MOVIE_POSTER));
-            movie.setmPlot(jsonArrayResult.getJSONObject(i).getString(MOVIE_PLOT));
-            movie.setmRating(jsonArrayResult.getJSONObject(i).getString(MOVIE_RATING));
-            movie.setmReleaseDate(jsonArrayResult.getJSONObject(i).getString(MOVIE_RELEASE_DATE));
+            movie.setmTitle(jsonArrayResult.getJSONObject(i).optString(MOVIE_TITLE));
+            movie.setmMoviePoster(jsonArrayResult.getJSONObject(i).optString(MOVIE_POSTER));
+            movie.setmPlot(jsonArrayResult.getJSONObject(i).optString(MOVIE_PLOT));
+            movie.setmRating(jsonArrayResult.getJSONObject(i).optString(MOVIE_RATING));
+            movie.setmReleaseDate(jsonArrayResult.getJSONObject(i).optString(MOVIE_RELEASE_DATE));
             result[i] = movie;
         }
         return result;

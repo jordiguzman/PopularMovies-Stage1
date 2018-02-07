@@ -9,7 +9,6 @@ import android.net.NetworkInfo;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
-import android.os.SystemClock;
 import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
@@ -44,6 +43,7 @@ public class MainActivity extends AppCompatActivity implements MovieAdapter.Movi
     private ProgressBar progressBar;
     private TextView tv_error;
     private Button btn_retry;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -147,12 +147,7 @@ public class MainActivity extends AppCompatActivity implements MovieAdapter.Movi
             errorNetworkApi();
             return;
         }
-        long clickTime=0;
-        Log.e("ClickTime", String.valueOf(SystemClock.elapsedRealtime()/1000));
-        if (SystemClock.elapsedRealtime()- clickTime<500){
 
-            return;
-        }
         Intent intent = new Intent(this, DetailActivity.class);
         intent.putExtra("title", mMovie[position].getmTitle());
         intent.putExtra("poster", mMovie[position].getmMoviePoster());

@@ -44,7 +44,6 @@ public class DetailActivity extends AppCompatActivity {
         tv_release.setText(releaseFinal);
         setTitle(title);
 
-
     }
 
 

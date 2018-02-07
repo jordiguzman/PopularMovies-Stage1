@@ -73,10 +73,7 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MovieHolder>
         public void onClick(View view) {
             int clickPosition = getAdapterPosition();
             mMovieClickListener.onClickMovie(clickPosition);
-
         }
-
-
     }
 
 

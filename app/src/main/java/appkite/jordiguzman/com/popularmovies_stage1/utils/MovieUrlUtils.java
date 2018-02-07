@@ -13,9 +13,13 @@ import java.util.Scanner;
 
 public class MovieUrlUtils {
 
-    // Put your api key here
+    /**
+     * Put your api key here ****************
+     */
     public static final String API_KEY = "";
-    //*********************
+    /**
+     * **************************************
+     */
     private static final String LOG_TAG = MovieUrlUtils.class.getSimpleName();
     private static final String MOVIE_QUERY_API = "api_key";
     private static final String MOVIE_BASE_URL = "https://api.themoviedb.org/3/movie/";
